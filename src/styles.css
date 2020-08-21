@@ -48,3 +48,10 @@
   overflow: hidden;
   background-color: cornsilk;
 }
+footer {
+
+  color: white;
+  background-color: #DC3545;
+  margin-top: 30px;
+  margin-bottom: 30px;
+}
