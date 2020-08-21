@@ -1,1 +1,50 @@
 /* You can add global styles to this file, and also import other style files */
+/* estilos para el boton de cargar imagen */
+.afu-select-btn {
+  background-color: cornsilk !important;
+}
+.afu-reset-btn {
+  background-color: cornsilk !important;
+}
+.afu-upload-btn {
+  background-color: cornsilk !important;
+}
+.afu-dragndrop-box {
+  background-color: cornsilk !important;
+}
+.afu-dragndrop-text {
+  background-color: cornsilk !important;
+}
+.afu-constraints-info {
+  background-color: cornsilk !important;
+}
+.afu-valid-file {
+  background-color: cornsilk !important;
+}
+.afu-invalid-file {
+  background-color: cornsilk !important;
+}
+.afu-progress-bar {
+  background-color: cornsilk !important;
+}
+.afu-upload-status {
+  background-color: cornsilk !important;
+}
+.afu-attach-pin {
+  background-color: cornsilk !important;
+}
+/* estilos para el boton de carga imagen */
+/* Estilos foto de perfil */
+#imageProfileMenu {
+  position: relative;
+  width: 30px;
+  bottom: -5px;
+  right: -5px;
+}
+.imageCircle{
+  border-radius: 900px;
+  width: 40px;
+  height: 40px;
+  overflow: hidden;
+  background-color: cornsilk;
+}

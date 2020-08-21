@@ -1,0 +1,9 @@
+{
+  "http://blog.laravel.api/api/*": {
+    "target": "http://blog.laravel.api",
+    "secure": false,
+    "changeOrigin":true,
+    "logLevel": "debug"
+  }
+
+}

@@ -1,0 +1,22 @@
+.ulUser{
+  color:black;
+  margin: 0px;
+  list-style:none
+
+}
+.ulUser:link
+{
+   text-decoration: none;
+}
+.ulUser:active
+{
+   text-decoration: none;
+}
+.ulUser:visited
+{
+   text-decoration: none;
+}
+.ulUser:hover
+{
+   text-decoration: underline;
+}
