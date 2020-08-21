@@ -12,7 +12,7 @@ export class AppComponent implements OnInit, DoCheck{
   title = 'Blog Angular';
   public identity: any;
   public token: any;
-  public url : any;
+  public url: any;
   constructor(
     public userService: UserService
   ){
