@@ -15,6 +15,8 @@ import { HttpClientModule, HttpClientJsonpModule } from '@angular/common/http';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { FroalaEditorModule, FroalaViewModule } from 'angular-froala-wysiwyg';
 import { AngularFileUploaderModule } from 'angular-file-uploader';
+import { CategoryNewComponent } from './components/categoryNew/category-new.component';
+import { PostNewComponent } from './components/post-new/post-new.component';
 
 
 
@@ -25,7 +27,9 @@ import { AngularFileUploaderModule } from 'angular-file-uploader';
     RegisterComponent,
     ErrorComponent,
     HomeComponent,
-    UserEditComponent
+    UserEditComponent,
+    CategoryNewComponent,
+    PostNewComponent
   ],
   imports: [
     BrowserModule,

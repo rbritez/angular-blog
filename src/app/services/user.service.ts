@@ -19,11 +19,7 @@ export class UserService{
   ){
     this.url = global.url;
   }
-  /*
-  test(){
-    return "Hola mundo desde el servicio usuario";
-  }
-  */
+
   register(user: any): Observable<any> {
     const json = JSON.stringify(user);
     const params = 'json=' + json;
