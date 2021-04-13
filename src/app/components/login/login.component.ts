@@ -2,6 +2,7 @@ import { ActivatedRoute, Router, Routes } from '@angular/router';
 import { Component, OnInit } from '@angular/core';
 import { User } from './../../models/user';
 import { UserService } from './../../services/user.service';
+import Swal from 'sweetalert2';
 
 @Component({
   selector: 'app-login',
@@ -44,11 +45,16 @@ export class LoginComponent implements OnInit {
             this.dataUser();
              // redirecciono
             this.router.navigate(['inicio']);
+          }else{
+            //respuesta con error
+            this.notification('Datos Invalidos',response.message,'Intentar Nuevamente');
+            console.log(response);
           }
-          console.log(response);
         },
         error => {
+          //error de endpoint
           this.status = 'error';
+          this.notification('Problemas Internos','Intente nuevamente más tarde','OK');
           console.log(error);
         }
       );
@@ -79,5 +85,15 @@ export class LoginComponent implements OnInit {
       }
     );
   }
+
+  notification(titleText:any, text:any , btnText:any ){
+    Swal.fire({
+      title: titleText,
+      text: text,
+      icon: 'error',
+      confirmButtonText: btnText
+    })
+  }
+
 
 }

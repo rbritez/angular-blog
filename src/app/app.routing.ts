@@ -1,4 +1,3 @@
-
 // IMPORTS NECESARIOS
 import { ModuleWithProviders } from '@angular/core';
 import { Routes, RouterModule } from '@angular/router';
@@ -10,6 +9,7 @@ import { ErrorComponent } from './components/error/error.component';
 import { HomeComponent } from './components/home/home.component';
 import { UserEditComponent } from './components/user-edit/user-edit.component';
 import { CategoryNewComponent } from './components/categoryNew/category-new.component';
+import { PostNewComponent } from './components/post-new/post-new.component';
 
 
 // DEFINIR LAS RUTAS
@@ -21,6 +21,7 @@ const appRoutes: Routes = [
   {path: 'logout/:sure', component: LoginComponent},
   {path: 'ajustes', component: UserEditComponent},
   {path: 'crear-categoria', component: CategoryNewComponent},
+  {path: 'crear-post', component: PostNewComponent},
   // Ruta del error siempre ultimo
   {path: '**', component: ErrorComponent}
 ];
