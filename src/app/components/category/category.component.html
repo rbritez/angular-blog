@@ -1,0 +1,43 @@
+<div class="col-md-12 mt-3">
+  <h1>{{pageTitle}}</h1>
+  <div >
+    <p>Listado de Categorías activas en el Blog!</p>
+    <button class="btn btn-success float-right">Nueva Categoría</button>
+  </div>
+  <hr>
+  <div class="alert alert-success col-md-12" *ngIf="status == 'success' ">
+    La categoria se ha creado correctamente.
+  </div>
+
+  <div class="alert alert-danger col-md-12" *ngIf="status == 'error' ">
+    La categoria no se guardo, vuelve a intentarlo.
+  </div>
+  <!-- <a class="dropdown-item" href="#" *ngFor="let category of categories">{{ category.name }}</a> -->
+  <table class="table table-striped table-dark">
+    <thead>
+      <tr>
+        <th scope="col">#</th>
+        <th scope="col">Nombre</th>
+        <th scope="col">Acciones</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr *ngFor="let category of categories">
+        <th scope="row">{{category.id}}</th>
+        <td>{{ category.name}}</td>
+        <td> <button class="btn btn-success" [routerLink]="['/categoria/1']">Editar</button></td>
+      </tr>
+    </tbody>
+  </table>
+
+<!--   <form id=formId (ngSubmit)="onSubmit(categoryForm)"  class="col-md-5 ml-0 pl-0" #categoryForm="ngForm">
+    <div class="form-group">
+       <label for="name">Nombre:</label>
+       <input type="text" name="name" class="form-control" #name="ngModel" [(ngModel)]="category.name" required>
+       <small *ngIf="!name.valid && name.touched" class="invalid-feedback d-block" > Debe ingresar un nombre para continuar</small>
+    </div>
+    <div>
+      <input type="submit" class="btn btn-success" value="Guardar"  [disabled]="categoryForm.invalid">
+    </div>
+  </form> -->
+</div>

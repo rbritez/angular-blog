@@ -22,10 +22,14 @@ export class CategoryService{
     const headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded')
                                       .set('Authorization', token); // creo el encabezado
     // envio los datos a la API
-    return this.http.post(this.url + 'category', params, {headers}) ;
+    return this.http.post(this.url + 'category', params, {headers});
   }
   getCategories(): Observable<any>{
     const headers = new HttpHeaders().set('Content-Type', 'application/x-www-form-urlencoded');
     return this.http.get(this.url + 'category', {headers});
+  }
+  showCategory(token:any,idCategory:any): Observable<any>{
+    const headers = new HttpHeaders().set('Content-Type','application/x-www-form-urlencoded').set('Authorization',token);
+    return this.http.get(this.url + 'category/'+idCategory,{headers});
   }
 }
