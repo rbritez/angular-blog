@@ -26,10 +26,9 @@ export class AppComponent implements OnInit, DoCheck{
   }
 
   ngOnInit(): any{
-    console.log('webapp cargada correctamente');
     this.getCategories();
-
   }
+
   ngDoCheck(): any{
     this.loadUser();
   }
@@ -40,9 +39,8 @@ export class AppComponent implements OnInit, DoCheck{
   getCategories(): any{
     this.categoryService.getCategories().subscribe(
       response => {
-        if (response.status){
+        if (response.status == 'success'){
           this.categories = response.categories;
-          console.log(response);
         }
       },
       error => {
